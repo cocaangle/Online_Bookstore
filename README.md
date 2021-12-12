@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+An online Bookstore based on Ruby(3.0.0) on Rails. Shoppers can search by keyword to find the book they want, and add to shopping cart to check out. Admins can check and edit each product details, manage orders and users.
 
-Things you may want to cover:
+Related features and tech:
 
-* Ruby version
+* Shopping cart: Ajax, Restful API
 
-* System dependencies
+* User account: Authentication, password encryption(Bcrypt)
 
-* Configuration
+* Fuzzy Search
 
-* Database creation
+* Database used: sqlite 3
+### Shopper's view:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+![image](shopper_view.png)
+### Admin's view:
+![image](admin_view.png)
