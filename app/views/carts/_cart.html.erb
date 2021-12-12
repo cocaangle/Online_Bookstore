@@ -1,0 +1,22 @@
+<% if notice %>
+<p id="notice"><%= notice %></p>
+<% end %>
+
+<h2>Items in your shopping cart</h2>
+
+<table>
+  <% @cart.lineitems.each do |item|%>
+  <tr>
+     <td> <%= item.quantity%> </td>
+     <td> <%= item.product.name%> </td>
+     <td> <%= item.product.price%> </td>
+  </tr>
+  <% end %>
+  <tr>
+    <td colspan="2">Total price</td>
+    <td> <%=@cart.total_price%> </td>
+  </tr>
+</table>
+
+<%= button_to "Empty Cart", @cart, method: :delete, data: {confirm: 'are you sure you want to empty the cart?'} %>
+<%= button_to "Check Out", new_order_path, method: :get%>
